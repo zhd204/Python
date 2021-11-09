@@ -1,2 +1,0 @@
-This is test file2.
-Target string is id.
