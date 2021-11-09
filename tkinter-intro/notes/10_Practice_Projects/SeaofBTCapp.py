@@ -1,3 +1,6 @@
+# https://github.com/Sea-of-BTC/Bitcoin-Trading-Client
+# https://pythonprogramming.net/tkinter-depth-tutorial-making-actual-program/
+
 import tkinter as tk
 
 LARGE_FONT = ("Verdana", 16)
@@ -6,7 +9,8 @@ LARGE_FONT = ("Verdana", 16)
 class SeaofBTCapp(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.title("Trending - GUI")
+        self.iconbitmap("clienticon.ico")
+        self.title("Sea of BTC Client")
         self.attributes("-topmost", 1)
 
         container = tk.Frame(self)
