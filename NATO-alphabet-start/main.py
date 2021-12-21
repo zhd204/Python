@@ -31,10 +31,13 @@ print(word_dict)
 
 # TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 while True:
-    input_word = input("Enter a word: ").upper()
-    if input_word != "QUIT":
-        word_list = [word_dict[letter] for letter in list(input_word)]
-        print(word_list)
-        print("\nEnter 'quit' to end the game.")
-    else:
-        break
+    try:
+        input_word = input("Enter a word: ").upper()
+        if input_word != "QUIT":
+            word_list = [word_dict[letter] for letter in list(input_word)]
+            print(word_list)
+            print("\nEnter 'quit' to end the game.")
+        else:
+            break
+    except KeyError:
+        print("Sorry, only letters in the alphabet please.")
