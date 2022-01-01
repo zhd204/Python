@@ -36,4 +36,6 @@ sunset_utc = parser.isoparse(sunset_str)
 sunrise_local = sunrise_utc.astimezone(to_zone)
 sunset_local = sunset_utc.astimezone(to_zone)
 
-print(f"sunrise time is {sunrise_local}, sunset time is {sunset_local}")
+time_now = datetime.now()
+
+print(f"sunrise time is {sunrise_local}, sunset time is {sunset_local}, current time is {time_now}")
