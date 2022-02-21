@@ -1,0 +1,471 @@
+sheety get response format
+
+{'prices': [{'city': 'Paris', 'iataCode': '', 'lowestPrice': 54, 'id': 2}, {'city': 'Berlin', 'iataCode': '', 'lowestPrice': 42, 'id': 3}, {'city': 'Tokyo', 'iataCode': '', 'lowestPrice': 485, 'id': 4}, {'city': 'Sydney', 'iataCode': '', 'lowestPrice': 551, 'id': 5}, {'city': 'Istanbul', 'iataCode': '', 'lowestPrice': 95, 'id': 6}, {'city': 'Kuala Lumpur', 'iataCode': '', 'lowestPrice': 414, 'id': 7}, {'city': 'New York', 'iataCode': '', 'lowestPrice': 240, 'id': 8}, {'city': 'San Francisco', 'iataCode': '', 'lowestPrice': 260, 'id': 9}, {'city': 'Cape Town', 'iataCode': '', 'lowestPrice': 378, 'id': 10}]}
+
+
+tequila location query response format
+
+{'locations': [{'id': 'washington_dc_us', 'active': True, 'name': 'Washington, D.C.', 'slug': 'washington-district-of-columbia-united-states', 'slug_en': 'washington-district-of-columbia-united-states', 'code': 'WAS', 'alternative_names': [], 'rank': 6, 'global_rank_dst': 27, 'dst_popularity_score': 571015.0, 'timezone': 'America/New_York', 'population': 601723, 'airports': 3, 'stations': 1, 'hotels': 579, 'bus_stations': 2, 'subdivision': {'id': 'DC_US', 'name': 'District of Columbia', 'slug': 'district-of-columbia-united-states', 'code': 'DC'}, 'autonomous_territory': None, 'country': {'id': 'US', 'name': 'United States', 'slug': 'united-states', 'code': 'US'}, 'region': {'id': 'northern-america', 'name': 'Northern America', 'slug': 'northern-america'}, 'continent': {'id': 'north-america', 'name': 'North America', 'slug': 'north-america', 'code': 'NA'}, 'location': {'lat': 38.907192, 'lon': -77.036871}, 'tags': [{'tag': 'culture', 'month_to': -1, 'month_from': -1}, {'tag': 'family fun', 'month_to': -1, 'month_from': -1}, {'tag': 'sightseeing', 'month_to': -1, 'month_from': -1}], 'alternative_departure_points': [{'id': 'ABE', 'distance': 291.31, 'duration': 14277.7}, {'id': 'ACY', 'distance': 269.97, 'duration': 13462.6}, {'id': 'AOO', 'distance': 236.79, 'duration': 11514.9}, {'id': 'BBX', 'distance': 234.7, 'duration': 11417.7}, {'id': 'BWI', 'distance': 51.05, 'duration': 2834.8}, {'id': 'CHO', 'distance': 175.81, 'duration': 9079.1}, {'id': 'DCA', 'distance': 9.4, 'duration': 707}, {'id': 'HGR', 'distance': 118.13, 'duration': 5983}, {'id': 'IAD', 'distance': 45.69, 'duration': 2955.1}, {'id': 'ILG', 'distance': 167.76, 'duration': 8113.9}, {'id': 'JST', 'distance': 274.56, 'duration': 13390.7}, {'id': 'LNS', 'distance': 186.04, 'duration': 9324}, {'id': 'MDT', 'distance': 191.8, 'duration': 9529.9}, {'id': 'MIV', 'distance': 235.92, 'duration': 11288.7}, {'id': 'MRB', 'distance': 126.55, 'duration': 6812.1}, {'id': 'MTN', 'distance': 83.2, 'duration': 4523.9}, {'id': 'ORF', 'distance': 310.67, 'duration': 13617.7}, {'id': 'PHF', 'distance': 269.41, 'duration': 11708.9}, {'id': 'PHL', 'distance': 206.77, 'duration': 9822.9}, {'id': 'PNE', 'distance': 243.44, 'duration': 11982}, {'id': 'RIC', 'distance': 188.22, 'duration': 8680.3}, {'id': 'SBY', 'distance': 200.4, 'duration': 10200.5}, {'id': 'SHD', 'distance': 235.18, 'duration': 10389.9}, {'id': 'TTN', 'distance': 274.32, 'duration': 13310.2}, {'id': 'ZFV', 'distance': 218.71, 'duration': 10602.2}, {'id': 'ZUG', 'distance': 183.17, 'duration': 9010.2}], 'providers': [1096, 1161, 1162, 1165, 1175, 1235, 1277, 1283], 'car_rentals': [{'provider_id': 1175, 'providers_locations': ['378886', '507018', '507703', '3382426', '1306508', '1306638', '2285656', '2285651', '4024003', '4024002']}, {'provider_id': 1175, 'providers_locations': ['758003', '379056', '979853', '2027703', '379356', '379701', '979848', '2250016', '4110039', '759248', '379716', '706983', '1690016', '2250021', '2193486', '880613', '2193481', '1306503', '4030415', '379051', '1744971']}], 'type': 'city'}], 'meta': {'locale': {'code': 'en-US', 'status': 'OK'}}, 'last_refresh': 1641121691, 'results_retrieved': 1}
+
+
+tequila flight search response format
+
+-request url:
+
+https://tequila-api.kiwi.com/v2/search?fly_from=airport%3AIAD%2Cairport%3AEWR&fly_to=city%3ABJS%2Ccity%3ABER%2Ccity%3APAR&date_from=01%2F04%2F2022&date_to=07%2F04%2F2022&max_fly_duration=20&flight_type=oneway&one_for_city=1&one_per_date=0&adults=2&selected_cabins=M&adult_hold_bag=2%2C2&adult_hand_bag=1%2C1&only_working_days=false&only_weekends=false&partner_market=us&curr=USD&locale=en&max_stopovers=2&max_sector_stopovers=1&vehicle_type=aircraft&limit=500
+
+
+-response body: ()
+
+{
+  "search_id": "349e2198-9cfd-28f8-72e4-0b8b61a492ab",
+  "time": 1,
+  "currency": "USD",
+  "fx_rate": 1.137395,
+  "data": [
+    {
+      "id": "1cdb0a224a8d000037f3d434_0|0a221cb24a8e000061de2c90_0",
+      "flyFrom": "EWR",
+      "flyTo": "BVA",
+      "cityFrom": "New York",
+      "cityCodeFrom": "NYC",
+      "cityTo": "Paris",
+      "cityCodeTo": "PAR",
+      "countryFrom": {
+        "code": "US",
+        "name": "United States"
+      },
+      "countryTo": {
+        "code": "FR",
+        "name": "France"
+      },
+      "type_flights": [
+        "deprecated"
+      ],
+      "nightsInDest": null,
+      "quality": 1301.66609,
+      "distance": 5815.36,
+      "duration": {
+        "departure": 46500,
+        "return": 0,
+        "total": 46500
+      },
+      "price": 1219,
+      "conversion": {
+        "USD": 1219,
+        "EUR": 1071
+      },
+      "bags_price": {
+        "1": 123.8,
+        "2": 287.16
+      },
+      "baglimit": {
+        "hand_height": 35,
+        "hand_length": 55,
+        "hand_weight": 10,
+        "hand_width": 20,
+        "hold_dimensions_sum": 157,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 20,
+        "hold_width": 27
+      },
+      "availability": {
+        "seats": null
+      },
+      "routes": [
+        [
+          "EWR",
+          "BVA"
+        ]
+      ],
+      "airlines": [
+        "FR",
+        "UA"
+      ],
+      "route": [
+        {
+          "id": "1cdb0a224a8d000037f3d434_0",
+          "combination_id": "1cdb0a224a8d000037f3d434",
+          "flyFrom": "EWR",
+          "flyTo": "MAD",
+          "cityFrom": "New York",
+          "cityCodeFrom": "NYC",
+          "cityTo": "Madrid",
+          "cityCodeTo": "MAD",
+          "airline": "UA",
+          "flight_no": 51,
+          "operating_carrier": "UA",
+          "operating_flight_no": "51",
+          "fare_basis": "",
+          "fare_category": "M",
+          "fare_classes": "K",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": false,
+          "guarantee": false,
+          "vi_connection": false,
+          "last_seen": "2022-01-02T08:32:04.000Z",
+          "refresh_timestamp": "2022-01-02T08:32:04.000Z",
+          "equipment": null,
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-04T09:00:00.000Z",
+          "utc_arrival": "2022-04-04T07:00:00.000Z",
+          "local_departure": "2022-04-03T19:45:00.000Z",
+          "utc_departure": "2022-04-03T23:45:00.000Z"
+        },
+        {
+          "id": "0a221cb24a8e000061de2c90_0",
+          "combination_id": "0a221cb24a8e000061de2c90",
+          "flyFrom": "MAD",
+          "flyTo": "BVA",
+          "cityFrom": "Madrid",
+          "cityCodeFrom": "MAD",
+          "cityTo": "Paris",
+          "cityCodeTo": "PAR",
+          "airline": "FR",
+          "flight_no": 5444,
+          "operating_carrier": "",
+          "operating_flight_no": "",
+          "fare_basis": "",
+          "fare_category": "M",
+          "fare_classes": "",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": true,
+          "guarantee": true,
+          "vi_connection": true,
+          "last_seen": "2022-01-02T15:18:42.000Z",
+          "refresh_timestamp": "2022-01-02T15:18:42.000Z",
+          "equipment": null,
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-04T14:40:00.000Z",
+          "utc_arrival": "2022-04-04T12:40:00.000Z",
+          "local_departure": "2022-04-04T12:40:00.000Z",
+          "utc_departure": "2022-04-04T10:40:00.000Z"
+        }
+      ],
+      "booking_token": "CTi39s_P3JywUdfpB2bRwqzQMBCVKCMN1lmvzzoeINEbXcbHqxFVBRpdHkhVmwLm3H2zrPz6ejWvAjGRVM86crC2yM8ROW58Q4dm52BEdu775bQ8NKImmkEurMsJYQ7hCvjOtb7A8NjOkv7TFVl3NZZb2eGyjn5vFNWuCzj1lx5BwUOIAuQr-tZq7sRTTjjyTk8cxW5Mc8L3c05SRxqh1Qx80M5s3Rj6PNAX6TMdqp0TYsqrvaXoXxBrN8t24Ueq9C_rPHDwZH5j22Luhx2bc7Lmi9nq1xuPLKebX_7KwWlBezA9NQJy76t2DTVKxCMrAoJ2v2fXMfhz-SuhzVkaLd-qxC8t0iUISfENu-HhxfrKVyymL3aMMnY13r4_S3DEl8_rWyFsZ4oDdkkR99NswQk2JlsCMmuQL4SJOPVeyy8U=",
+      "deep_link": "https://www.kiwi.com/deep?from=EWR&to=BVA&flightsId=1cdb0a224a8d000037f3d434_0%7C0a221cb24a8e000061de2c90_0&price=1071&passengers=2&affilid=masscircleflightsearch&lang=en&currency=USD&searchBags=1.2_1.2&booking_token=CTi39s_P3JywUdfpB2bRwqzQMBCVKCMN1lmvzzoeINEbXcbHqxFVBRpdHkhVmwLm3H2zrPz6ejWvAjGRVM86crC2yM8ROW58Q4dm52BEdu775bQ8NKImmkEurMsJYQ7hCvjOtb7A8NjOkv7TFVl3NZZb2eGyjn5vFNWuCzj1lx5BwUOIAuQr-tZq7sRTTjjyTk8cxW5Mc8L3c05SRxqh1Qx80M5s3Rj6PNAX6TMdqp0TYsqrvaXoXxBrN8t24Ueq9C_rPHDwZH5j22Luhx2bc7Lmi9nq1xuPLKebX_7KwWlBezA9NQJy76t2DTVKxCMrAoJ2v2fXMfhz-SuhzVkaLd-qxC8t0iUISfENu-HhxfrKVyymL3aMMnY13r4_S3DEl8_rWyFsZ4oDdkkR99NswQk2JlsCMmuQL4SJOPVeyy8U=",
+      "tracking_pixel": "",
+      "facilitated_booking_available": false,
+      "pnr_count": 2,
+      "has_airport_change": false,
+      "technical_stops": 0,
+      "throw_away_ticketing": false,
+      "hidden_city_ticketing": false,
+      "virtual_interlining": true,
+      "transfers": [],
+      "local_arrival": "2022-04-04T14:40:00.000Z",
+      "utc_arrival": "2022-04-04T12:40:00.000Z",
+      "local_departure": "2022-04-03T19:45:00.000Z",
+      "utc_departure": "2022-04-03T23:45:00.000Z"
+    },
+    {
+      "id": "1cdb0a224a8f000050c58032_0|0a2200424a9000008743d598_0",
+      "flyFrom": "EWR",
+      "flyTo": "BER",
+      "cityFrom": "New York",
+      "cityCodeFrom": "NYC",
+      "cityTo": "Berlin",
+      "cityCodeTo": "BER",
+      "countryFrom": {
+        "code": "US",
+        "name": "United States"
+      },
+      "countryTo": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "type_flights": [
+        "deprecated"
+      ],
+      "nightsInDest": null,
+      "quality": 1395.99919,
+      "distance": 6417,
+      "duration": {
+        "departure": 67500,
+        "return": 0,
+        "total": 67500
+      },
+      "price": 1220,
+      "conversion": {
+        "USD": 1220,
+        "EUR": 1072
+      },
+      "bags_price": {
+        "1": 126.8,
+        "2": 293.16
+      },
+      "baglimit": {
+        "hand_height": 35,
+        "hand_length": 55,
+        "hand_weight": 10,
+        "hand_width": 20,
+        "hold_dimensions_sum": 157,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 20,
+        "hold_width": 27
+      },
+      "availability": {
+        "seats": 6
+      },
+      "routes": [
+        [
+          "EWR",
+          "BER"
+        ]
+      ],
+      "airlines": [
+        "FR",
+        "UA"
+      ],
+      "route": [
+        {
+          "id": "1cdb0a224a8f000050c58032_0",
+          "combination_id": "1cdb0a224a8f000050c58032",
+          "flyFrom": "EWR",
+          "flyTo": "MAD",
+          "cityFrom": "New York",
+          "cityCodeFrom": "NYC",
+          "cityTo": "Madrid",
+          "cityCodeTo": "MAD",
+          "airline": "UA",
+          "flight_no": 51,
+          "operating_carrier": "UA",
+          "operating_flight_no": "51",
+          "fare_basis": "",
+          "fare_category": "M",
+          "fare_classes": "K",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": false,
+          "guarantee": false,
+          "vi_connection": false,
+          "last_seen": "2022-01-02T04:02:45.000Z",
+          "refresh_timestamp": "2022-01-02T04:02:45.000Z",
+          "equipment": null,
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-06T09:00:00.000Z",
+          "utc_arrival": "2022-04-06T07:00:00.000Z",
+          "local_departure": "2022-04-05T19:45:00.000Z",
+          "utc_departure": "2022-04-05T23:45:00.000Z"
+        },
+        {
+          "id": "0a2200424a9000008743d598_0",
+          "combination_id": "0a2200424a9000008743d598",
+          "flyFrom": "MAD",
+          "flyTo": "BER",
+          "cityFrom": "Madrid",
+          "cityCodeFrom": "MAD",
+          "cityTo": "Berlin",
+          "cityCodeTo": "BER",
+          "airline": "FR",
+          "flight_no": 2528,
+          "operating_carrier": "",
+          "operating_flight_no": "",
+          "fare_basis": "",
+          "fare_category": "M",
+          "fare_classes": "",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": true,
+          "guarantee": true,
+          "vi_connection": true,
+          "last_seen": "2022-01-02T16:16:23.000Z",
+          "refresh_timestamp": "2022-01-02T16:16:23.000Z",
+          "equipment": null,
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-06T20:30:00.000Z",
+          "utc_arrival": "2022-04-06T18:30:00.000Z",
+          "local_departure": "2022-04-06T17:30:00.000Z",
+          "utc_departure": "2022-04-06T15:30:00.000Z"
+        }
+      ],
+      "booking_token": "CYQrTSTah9rEGA71ZMRQncmkLmXFXNQFKBxr-Jrgqvq2Iome9I0vMjvv29n32YGxJDtszS4XkHS6jw0ags8W9aIgAGcncRHsPYfoevPpZe6xIcbYrCJGyQPpQkKga5c88vrq5wLmGEsqtVCu4eZC3Ofj2OhvLortzROuUlosiprsrGS4_fho2dJ-FedkhYfPZD_3Wb9TxZOVsttuJOIzILfziIPNQ-hktkD9kmQbKeLg_KLy3ws-c1oicyuNmVJF-pn9h21axz9_MPeXKkGJjzpjxcYkeQq-Td0sjiRHK8sHUMvScgh6ruPSconMnJQVoB0xMFLFHvBXkXen9WCmI6_AeOQPRDZWMRw06r0mQJMvYWhVrTTr0hVqUV3hLWkr8qTD2eg92d5KxM7zNUxO-F0vDeevdOjUzu4Hx4g6aB3U=",
+      "deep_link": "https://www.kiwi.com/deep?from=EWR&to=BER&flightsId=1cdb0a224a8f000050c58032_0%7C0a2200424a9000008743d598_0&price=1072&passengers=2&affilid=masscircleflightsearch&lang=en&currency=USD&searchBags=1.2_1.2&booking_token=CYQrTSTah9rEGA71ZMRQncmkLmXFXNQFKBxr-Jrgqvq2Iome9I0vMjvv29n32YGxJDtszS4XkHS6jw0ags8W9aIgAGcncRHsPYfoevPpZe6xIcbYrCJGyQPpQkKga5c88vrq5wLmGEsqtVCu4eZC3Ofj2OhvLortzROuUlosiprsrGS4_fho2dJ-FedkhYfPZD_3Wb9TxZOVsttuJOIzILfziIPNQ-hktkD9kmQbKeLg_KLy3ws-c1oicyuNmVJF-pn9h21axz9_MPeXKkGJjzpjxcYkeQq-Td0sjiRHK8sHUMvScgh6ruPSconMnJQVoB0xMFLFHvBXkXen9WCmI6_AeOQPRDZWMRw06r0mQJMvYWhVrTTr0hVqUV3hLWkr8qTD2eg92d5KxM7zNUxO-F0vDeevdOjUzu4Hx4g6aB3U=",
+      "tracking_pixel": "",
+      "facilitated_booking_available": false,
+      "pnr_count": 2,
+      "has_airport_change": false,
+      "technical_stops": 0,
+      "throw_away_ticketing": false,
+      "hidden_city_ticketing": false,
+      "virtual_interlining": true,
+      "transfers": [],
+      "local_arrival": "2022-04-06T20:30:00.000Z",
+      "utc_arrival": "2022-04-06T18:30:00.000Z",
+      "local_departure": "2022-04-05T19:45:00.000Z",
+      "utc_departure": "2022-04-05T23:45:00.000Z"
+    },
+    {
+      "id": "11af097b4a8e00003149faf0_0|097b0ddc4a8f0000d20d6718_0",
+      "flyFrom": "IAD",
+      "flyTo": "PEK",
+      "cityFrom": "Washington, D.C.",
+      "cityCodeFrom": "WAS",
+      "cityTo": "Beijing",
+      "cityCodeTo": "BJS",
+      "countryFrom": {
+        "code": "US",
+        "name": "United States"
+      },
+      "countryTo": {
+        "code": "CN",
+        "name": "China"
+      },
+      "type_flights": [
+        "deprecated"
+      ],
+      "nightsInDest": null,
+      "quality": 7004.99914,
+      "distance": 11125,
+      "duration": {
+        "departure": 72000,
+        "return": 0,
+        "total": 72000
+      },
+      "price": 7576,
+      "conversion": {
+        "USD": 7576,
+        "EUR": 6661
+      },
+      "bags_price": {
+        "1": 0,
+        "2": 0
+      },
+      "baglimit": {
+        "hand_height": 40,
+        "hand_length": 55,
+        "hand_weight": 10,
+        "hand_width": 20,
+        "hold_dimensions_sum": 158,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 23,
+        "hold_width": 28
+      },
+      "availability": {
+        "seats": null
+      },
+      "routes": [
+        [
+          "IAD",
+          "PEK"
+        ]
+      ],
+      "airlines": [
+        "UA",
+        "NH"
+      ],
+      "route": [
+        {
+          "id": "11af097b4a8e00003149faf0_0",
+          "combination_id": "11af097b4a8e00003149faf0",
+          "flyFrom": "IAD",
+          "flyTo": "HND",
+          "cityFrom": "Washington, D.C.",
+          "cityCodeFrom": "WAS",
+          "cityTo": "Tokyo",
+          "cityCodeTo": "TYO",
+          "airline": "UA",
+          "flight_no": 7941,
+          "operating_carrier": "NH",
+          "operating_flight_no": "101",
+          "fare_basis": "ULX9ISOU",
+          "fare_category": "M",
+          "fare_classes": "U",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": false,
+          "guarantee": false,
+          "vi_connection": false,
+          "last_seen": "2022-01-01T22:17:46.000Z",
+          "refresh_timestamp": "2022-01-01T22:17:46.000Z",
+          "equipment": "789",
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-05T15:20:00.000Z",
+          "utc_arrival": "2022-04-05T06:20:00.000Z",
+          "local_departure": "2022-04-04T12:15:00.000Z",
+          "utc_departure": "2022-04-04T16:15:00.000Z"
+        },
+        {
+          "id": "097b0ddc4a8f0000d20d6718_0",
+          "combination_id": "097b0ddc4a8f0000d20d6718",
+          "flyFrom": "HND",
+          "flyTo": "PEK",
+          "cityFrom": "Tokyo",
+          "cityCodeFrom": "TYO",
+          "cityTo": "Beijing",
+          "cityCodeTo": "BJS",
+          "airline": "NH",
+          "flight_no": 963,
+          "operating_carrier": "NH",
+          "operating_flight_no": "963",
+          "fare_basis": "Y2XOWA3",
+          "fare_category": "M",
+          "fare_classes": "Y",
+          "fare_family": "",
+          "return": 0,
+          "bags_recheck_required": true,
+          "guarantee": true,
+          "vi_connection": true,
+          "last_seen": "2022-01-01T22:03:38.000Z",
+          "refresh_timestamp": "2022-01-01T22:03:38.000Z",
+          "equipment": null,
+          "vehicle_type": "aircraft",
+          "local_arrival": "2022-04-05T20:15:00.000Z",
+          "utc_arrival": "2022-04-05T12:15:00.000Z",
+          "local_departure": "2022-04-05T17:20:00.000Z",
+          "utc_departure": "2022-04-05T08:20:00.000Z"
+        }
+      ],
+      "booking_token": "Cv6UZWaSbcD0HriNrvoDp7zgZYcXs5Xh_g8W6LChV8LrMwiQNGAfNICBDHjdJLWopr4H1rL694btsIRYbU3yBI6tOAfOoZecONOSB_35TKhC_Zrl5R19VQafmDiIMeZPst4twHQX0VihAUrKOH5ykjXHck24nJfWY98iOfPnjwlyPQ2yRMgxC8T6P7ZlHJaYbyUTbuiuh2ctDKR1bNG5uBs6GgwfLhSC0QWB6tOjWSC82XIvTHeC6rnhgHTwkspPF5LUbGMAFwJytT6Dfs91h8cWkCcrQMj5cFBmO9MVkwFJ0odAiC6ZCgX3SxSo6AT-67Rf3l58mrqO7_6h8i-NZYglaKfyZww-Db3zOSNpaRBcNagmMg4Ih3vWjE5iOfN0qQ5NE2uQogclcdcLVlmp3YtEWQT55V-TH54ig2wllKz4VzIJ7ZnQckE-RskAdBOlfBc8SKw1EdIE0pxUjNdiNvyQy6foYhfb2BHB_iMjkr7M=",
+      "deep_link": "https://www.kiwi.com/deep?from=IAD&to=PEK&flightsId=11af097b4a8e00003149faf0_0%7C097b0ddc4a8f0000d20d6718_0&price=6661&passengers=2&affilid=masscircleflightsearch&lang=en&currency=USD&searchBags=1.2_1.2&booking_token=Cv6UZWaSbcD0HriNrvoDp7zgZYcXs5Xh_g8W6LChV8LrMwiQNGAfNICBDHjdJLWopr4H1rL694btsIRYbU3yBI6tOAfOoZecONOSB_35TKhC_Zrl5R19VQafmDiIMeZPst4twHQX0VihAUrKOH5ykjXHck24nJfWY98iOfPnjwlyPQ2yRMgxC8T6P7ZlHJaYbyUTbuiuh2ctDKR1bNG5uBs6GgwfLhSC0QWB6tOjWSC82XIvTHeC6rnhgHTwkspPF5LUbGMAFwJytT6Dfs91h8cWkCcrQMj5cFBmO9MVkwFJ0odAiC6ZCgX3SxSo6AT-67Rf3l58mrqO7_6h8i-NZYglaKfyZww-Db3zOSNpaRBcNagmMg4Ih3vWjE5iOfN0qQ5NE2uQogclcdcLVlmp3YtEWQT55V-TH54ig2wllKz4VzIJ7ZnQckE-RskAdBOlfBc8SKw1EdIE0pxUjNdiNvyQy6foYhfb2BHB_iMjkr7M=",
+      "tracking_pixel": "",
+      "facilitated_booking_available": false,
+      "pnr_count": 2,
+      "has_airport_change": false,
+      "technical_stops": 0,
+      "throw_away_ticketing": false,
+      "hidden_city_ticketing": false,
+      "virtual_interlining": true,
+      "transfers": [],
+      "local_arrival": "2022-04-05T20:15:00.000Z",
+      "utc_arrival": "2022-04-05T12:15:00.000Z",
+      "local_departure": "2022-04-04T12:15:00.000Z",
+      "utc_departure": "2022-04-04T16:15:00.000Z"
+    }
+  ],
+  "_results": 3,
+  "search_params": {
+    "flyFrom_type": "airport",
+    "to_type": "city",
+    "seats": {
+      "passengers": 2,
+      "adults": 2,
+      "children": 0,
+      "infants": 0
+    }
+  },
+  "all_airlines": [],
+  "all_stopover_airports": [],
+  "del": 0,
+  "currency_rate": 0.879202,
+  "connections": [],
+  "refresh": [],
+  "ref_tasks": [],
+  "sort_version": 0
+}
+
+
+keys in the ["data"][0] element:
+
+dict_keys(['id', 'flyFrom', 'flyTo', 'cityFrom', 'cityCodeFrom', 'cityTo', 'cityCodeTo', 'countryFrom', 'countryTo', 'type_flights', 'nightsInDest', 'quality', 'distance', 'duration', 'price', 'conversion', 'bags_price', 'baglimit', 'availability', 'routes', 'airlines', 'route', 'booking_token', 'deep_link', 'tracking_pixel', 'facilitated_booking_available', 'pnr_count', 'has_airport_change', 'technical_stops', 'throw_away_ticketing', 'hidden_city_ticketing', 'virtual_interlining', 'transfers', 'local_arrival', 'utc_arrival', 'local_departure', 'utc_departure'])
+
+
+
+test results:
+
+{'PAR': {'flyFrom': 'EWR', 'flyTo': 'ORY', 'cityFrom': 'New York', 'cityTo': 'Paris', 'price': 662, 'airlines': 'airlines BF', 'local_departure': '2022-04-10', 'local_arrival': '2022-04-11'}, 'BER': {'flyFrom': 'EWR', 'flyTo': 'BER', 'cityFrom': 'New York', 'cityTo': 'Berlin', 'price': 917, 'airlines': 'airlines IB TP', 'local_departure': '2022-01-19', 'local_arrival': '2022-01-20'}, 'CPT': {'flyFrom': 'EWR', 'flyTo': 'CPT', 'cityFrom': 'New York', 'cityTo': 'Cape Town', 'price': 1264, 'airlines': 'airlines UA', 'local_departure': '2022-03-18', 'local_arrival': '2022-03-19'}, 'TYO': {'flyFrom': 'EWR', 'flyTo': 'NRT', 'cityFrom': 'New York', 'cityTo': 'Tokyo', 'price': 1427, 'airlines': 'airlines JL', 'local_departure': '2022-03-30', 'local_arrival': '2022-03-31'}, 'BJS': {'flyFrom': 'EWR', 'flyTo': 'PEK', 'cityFrom': 'New York', 'cityTo': 'Beijing', 'price': 2814, 'airlines': 'airlines LO', 'local_departure': '2022-03-26', 'local_arrival': '2022-03-28'}}

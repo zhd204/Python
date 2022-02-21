@@ -1,12 +1,22 @@
-import datetime as dt
+def only_files(file_path):
+    from os import listdir
+    from os.path import isfile, join
 
-today_date = dt.datetime.now().strftime("%m/%d/%Y")
+    onlyFiles = [f for f in listdir(file_path) if isfile(join(file_path, f))]
+    return onlyFiles
 
-now_time = dt.datetime.now().strftime("%X")
+import re
 
-print(today_date, now_time)
+l = "$2,999+/mo"
+s = l.split(" ")
+print(s)
+s[0].replace("-", "")
+print(s[0])
 
-time_iso = dt.datetime.now().time()
-now_time = ((time_iso.hour + ((time_iso.minute + (time_iso.second / 60.0)) / 60.0)) / 24.0)
+special_characters = ["$", ",", "+", "/", "mo"]
+for cha in special_characters:
+    s[0] = s[0].replace(cha, "")
+print(s[0])
 
-print(time_iso, now_time)
+from datetime import datetime
+print(datetime.now().year)

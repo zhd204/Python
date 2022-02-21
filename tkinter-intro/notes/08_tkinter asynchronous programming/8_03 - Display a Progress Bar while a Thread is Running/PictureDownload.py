@@ -15,7 +15,8 @@ class PictureDownload(Thread):
         # download the picture
         response = requests.get(self.url)
         picture_name = self.url.split('/')[-1]
-        picture_file = f'./assets/{picture_name}.jpg'
+        # picture_file = f"./assets/{picture_name}.jpg"
+        picture_file = f"tkinter-intro/notes/08_tkinter asynchronous programming/8_03 - Display a Progress Bar while a Thread is Running/assets/{picture_name}.jpg"
 
         # save the picture to a file
         # https://docs.python.org/3/library/functions.html#open

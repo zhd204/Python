@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="day39_flight-deal-finder" type="PythonConfigurationType" factoryName="Python" singleton="false">
+    <module name="Python" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="PARENT_ENVS" value="true" />
+    <envs>
+      <env name="PYTHONUNBUFFERED" value="1" />
+      <env name="BEARER_TOKEN" value="9d4406b8-507e-4951-ace4-2a10cb7da0e5" />
+      <env name="TEQUILA_API" value="3gW0_99Q916-R52FDRMpTMm0K-Y2ER1m" />
+      <env name="ACCT_SID" value="ACcd9798a904732202f9e00ea92b168710" />
+      <env name="AUTH_TOKEN" value="03c9066f9ad41f37baeb016054cea275" />
+    </envs>
+    <option name="SDK_HOME" value="" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <option name="IS_MODULE_SDK" value="true" />
+    <option name="ADD_CONTENT_ROOTS" value="true" />
+    <option name="ADD_SOURCE_ROOTS" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day39_flight-deal-finder/main.py" />
+    <option name="PARAMETERS" value="" />
+    <option name="SHOW_COMMAND_LINE" value="false" />
+    <option name="EMULATE_TERMINAL" value="false" />
+    <option name="MODULE_MODE" value="false" />
+    <option name="REDIRECT_INPUT" value="false" />
+    <option name="INPUT_FILE" value="" />
+    <method v="2" />
+  </configuration>
+</component>

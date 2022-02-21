@@ -24,10 +24,9 @@ stk_parameters = {
 }
 
 stk_data = response_data(url=STK_URL, params=stk_parameters)
-
 yesterday = select_day(stk_data["Time Series (Daily)"], 1)  # yyyy-mm-dd as string
-day_before_yesterday = select_day(stk_data["Time Series (Daily)"], 2)  # yyyy-mm-dd as string
-print(yesterday,day_before_yesterday)
+day_before_yesterday = select_day(stk_data["Time Series (Daily)"], 2, date=yesterday)  # yyyy-mm-dd as string
+print(yesterday, day_before_yesterday)
 yesterday_close_price = float(stk_data["Time Series (Daily)"][yesterday]["4. close"])
 day_before_yesterday_close_price = float(stk_data["Time Series (Daily)"][day_before_yesterday]["4. close"])
 
@@ -57,8 +56,8 @@ if abs(change_per) >= 0.05:
     # STEP 3: Use https://www.twilio.com
     # Send a separate message with the percentage change and each article's title and description to your phone number.
     # Twilio account info
-    account_sid = os.environ["TWILIO_ACCT_SID"]
-    auth_token = os.environ["TWILIO_AUTH_TOKEN"]
+    account_sid = os.environ["ACCT_SID"]
+    auth_token = os.environ["AUTH_TOKEN"]
 
     client = Client(account_sid, auth_token)
 
