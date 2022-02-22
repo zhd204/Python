@@ -1,0 +1,38 @@
+
+/**********************Tag Selectors**********************/
+h1 {
+  color: red;
+  font-size: 100px;
+}
+
+/*
+img {
+  background-color: red;
+}
+*/
+
+
+img:hover { /* :hover is a css Pseudo-class about mouse position */
+  background-color: gold;
+}
+
+
+/**********************Class Selectors**********************/
+
+.bacon {
+  background-color: green;
+}
+
+.broccoli {
+  background-color: red;
+}
+
+.circular {
+  border-radius: 25%;
+}
+
+/**********************ID Selectors**********************/
+
+#heading {
+  color: blue
+}

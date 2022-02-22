@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Form</h1>
+  <form>
+    <label>Name:
+      <input name="submitted-name" autocomplete="name">
+    </label>
+    <button>Save</button>
+  </form>
+
+  <!-- Form which will send a POST request to the current URL -->
+  <form method="post">
+    <label>Name:
+      <input name="submitted-name" autocomplete="name">
+    </label>
+    <button>Save</button>
+  </form>
+
+  <!-- Form with fieldset, legend, and label -->
+  <form method="post">
+    <fieldset>
+      <legend>Title</legend>
+      <label><input type="radio" name="radio"> Select me</label>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
